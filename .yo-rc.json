@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "finbarre",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.6.0",
+    "applicationType": "monolith",
+    "baseName": "slonieWEB",
+    "packageName": "finbarre",
+    "packageFolder": "finbarre",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGI5OGNmYmRmMTA1NmJjNzIyNjBmYTE2MWYwNjEzZjUxMWZlMWZiYWY3Y2IyMjVkMTYwMDc0MDFiYzY4M2QzZTlmMTdiNDdjZDEzYTVlYjI2NzQ1MDBkODIwMTBhYjRmY2Q1ZWQwY2M5ODdhMWEyMGFjOWMxOWNlOTBkYjk3ODc=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "pl"
+    ]
+  }
+}
