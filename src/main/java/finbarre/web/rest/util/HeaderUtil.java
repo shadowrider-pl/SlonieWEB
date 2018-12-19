@@ -27,6 +27,14 @@ public final class HeaderUtil {
         return createAlert(APPLICATION_NAME + "." + entityName + ".created", param);
     }
 
+    public static HttpHeaders createCountAlert(String entityName, String param) {
+        return createAlert(APPLICATION_NAME + "." + entityName + ".counted", param);
+    }
+
+    public static HttpHeaders createFailedAlert(String entityName, String param) {
+        return createAlert(APPLICATION_NAME + "." + entityName + ".failed", param);
+    }
+
     public static HttpHeaders createEntityUpdateAlert(String entityName, String param) {
         return createAlert(APPLICATION_NAME + "." + entityName + ".updated", param);
     }

@@ -1,0 +1,24 @@
+{
+    "slonieWebApp": {
+        "slonie": {
+            "home": {
+                "title": "Slonie",
+                "createLabel": "Dodaj Slonie",
+                "createOrEditLabel": "Dodaj lub edytuj: Slonie"
+            },
+            "created": "Utworzono nowy obiekt typu Slonie z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Slonie z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Slonie z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Slonie {{ id }}?"
+            },
+            "detail": {
+                "title": "Slonie"
+            },
+            "plik": "Plik",
+            "wynik": "Wynik",
+            "counted": "Policzone",
+            "failed": "Awaria!"
+        }
+    }
+}

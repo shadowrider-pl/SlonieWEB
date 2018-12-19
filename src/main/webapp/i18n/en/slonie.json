@@ -1,0 +1,24 @@
+{
+    "slonieWebApp": {
+        "slonie": {
+            "home": {
+                "title": "Slonies",
+                "createLabel": "Create a new Slonie",
+                "createOrEditLabel": "Create or edit a Slonie"
+            },
+            "created": "A new Slonie is created with identifier {{ param }}",
+            "updated": "A Slonie is updated with identifier {{ param }}",
+            "deleted": "A Slonie is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Slonie {{ id }}?"
+            },
+            "detail": {
+                "title": "Slonie"
+            },
+            "plik": "Plik",
+            "wynik": "Wynik",
+            "counted": "Counted",
+            "failed": "Failed!"
+        }
+    }
+}

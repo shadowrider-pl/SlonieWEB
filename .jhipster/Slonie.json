@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "plik",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "wynik",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20181219084511",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "slonie",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

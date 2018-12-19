@@ -1,7 +1,7 @@
 {
     "home": {
-        "title": "Witamy, Java Hipsterze!",
-        "subtitle": "To jest twoja strona domowa",
+        "title": "Słonie",
+        "subtitle": "Zadanie rekrutacyjne",
         "logged": {
             "message": "Jesteś zalogowany jako użytkownik \"{{username}}\"."
         },
@@ -14,6 +14,9 @@
             "follow": "skontaktuj się z @java_hipster na Twitterze"
         },
         "like": "Jeśli lubisz JHipster, nie zapomnij dać nam gwiazdki na",
-        "github": "GitHubie"
+        "github": "GitHubie",
+        "upload": "Prześlij",
+        "listOfFiles": "Lista plików:",
+        "count": "Oblicz"
     }
 }

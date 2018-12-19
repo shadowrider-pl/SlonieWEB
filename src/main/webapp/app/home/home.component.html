@@ -6,7 +6,75 @@
         <h1 class="display-4" jhiTranslate="home.title">Welcome, Java Hipster!</h1>
         <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
 
+
         <div [ngSwitch]="isAuthenticated()">
+<div *ngSwitchCase="true">
+    <h2 id="page-heading">
+        <span jhiTranslate="slonieWebApp.slonie.home.title">Slonie</span>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+        <div *ngIf="currentFileUpload" class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+                aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+                {{progress.percentage}}%</div>
+        </div>
+
+        <label class="btn btn-default">
+            <input type="file" (change)="selectFile($event)">
+        </label>
+
+        <button class="btn btn-outline-success" [disabled]="!selectedFiles" (click)="upload()">
+            <fa-icon [icon]="'asterisk'"></fa-icon>
+            <span jhiTranslate="home.upload">upload</span>
+        </button>
+        <br>
+        <br>
+
+
+            <div class="">
+                <h3>
+                    <span jhiTranslate="home.listOfFiles">listOfFiles</span>
+                </h3>
+                <table class="table table-bordered table-striped">
+                    <tr *ngFor="let file of fileUploads">
+                        <td>{{file}}</td>
+                        <td class="text-right">
+                            <div class="btn-group flex-btn-group-container">
+                                <button type="submit" (click)="deleteFile(file)" queryParamsHandling="merge" class="btn btn-danger btn-sm">
+                                    <fa-icon [icon]="'times'"></fa-icon>
+                                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                                </button>
+                                <button type="submit" (click)="count(file)" queryParamsHandling="merge" class="btn btn-success btn-sm">
+                                    <fa-icon [icon]="'asterisk'"></fa-icon>
+                                    <span class="d-none d-md-inline" jhiTranslate="home.count">Count</span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+    <div class="table-responsive" *ngIf="slonies!=undefined && slonies.length>0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="slonieWebApp.slonie.plik">Plik</span></th>
+            <th><span jhiTranslate="slonieWebApp.slonie.wynik">Wynik</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let slonie of slonies ;trackBy: trackId">
+                <td>{{slonie.plik}}</td>
+                <td>{{slonie.wynik}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
             <div class="alert alert-success" *ngSwitchCase="true">
                 <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message"
                     translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}". </span>
@@ -22,20 +90,5 @@
             </div>
         </div>
 
-        <p jhiTranslate="home.question">
-            If you have any question on JHipster:
-        </p>
-
-        <ul>
-            <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener" jhiTranslate="home.link.homepage">JHipster homepage</a></li>
-            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener" jhiTranslate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
-            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener" jhiTranslate="home.link.bugtracker">JHipster bug tracker</a></li>
-            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.link.chat">JHipster public chat room</a></li>
-            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener" jhiTranslate="home.link.follow">follow @java_hipster on Twitter</a></li>
-        </ul>
-
-        <p>
-            <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
-        </p>
     </div>
 </div>
